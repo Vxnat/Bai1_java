@@ -10,7 +10,8 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		int n;
-		System.err.println("Nhập số đầu sách: ");
+		System.out.println();
+		System.out.println("Nhập số đầu sách: ");
 		 n = sc.nextInt();
 		SACH sach2[] = new SACH[n];
 		for (int i = 0; i < n; i++) {
