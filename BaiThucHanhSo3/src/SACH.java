@@ -4,6 +4,18 @@ public class SACH {
 	private String ma , ten ,tg , loai , nxb;
 	private int trang , tap , gia;
 	
+	
+	public SACH(String ma, String ten, String tg, String loai, String nxb, int trang, int tap, int gia) {
+		this.ma = ma;
+		this.ten = ten;
+		this.tg = tg;
+		this.loai = loai;
+		this.nxb = nxb;
+		this.trang = trang;
+		this.tap = tap;
+		this.gia = gia;
+	}
+
 	public void NHAPSACH() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Nhap ma sach : ");
