@@ -12,10 +12,13 @@ public class main {
 		System.out.println();
 		System.out.println("---------------------");
 		System.out.println("Kết Quả 👌 ");
-		System.out.println("~Có phải TAM GIÁC 👉 " + tamgiac1.KIEMTRA());
-		System.out.println("~~Chu vi TAM GIÁC 👉 " + tamgiac1.Chuvi());
-		System.out.println("~~~Diện tích TAM GIÁC 👉 " + tamgiac1.Dientich());
-		System.out.println("---------------------");
+		if(tamgiac1.KIEMTRA() == true) {
+			System.out.println("~Có phải TAM GIÁC 👉 " + tamgiac1.KIEMTRA());
+			System.out.println("~~Chu vi TAM GIÁC 👉 " + tamgiac1.Chuvi());
+			System.out.println("~~~Diện tích TAM GIÁC 👉 " + tamgiac1.Dientich());
+		}
+		else System.out.println("~Có phải TAM GIÁC 👉 " + tamgiac1.KIEMTRA());
+			System.out.println("---------------------");
 		
 		//Hình Tròn 
 		System.out.println("Hình tròn ⚫ ");
