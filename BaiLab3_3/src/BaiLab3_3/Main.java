@@ -6,8 +6,25 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		ArrayList<HangHoa> dsHH = new ArrayList<HangHoa>();
-		int luaChon =0;
+		int luaChon = 0;
+		String luaChon1 ;
+		boolean Input = false;
 		Scanner sc = new Scanner(System.in);
+		
+		do {
+			System.out.println("🎊-----------------------🎊");
+			System.out.println(" 💡	Trang Chủ      💡");
+			System.out.println(
+					 "  Phím Bất Kỳ ✅ Bắt Đầu\n"
+					+"  Phím 0      ❌ Thoát\n ");
+			System.out.println("  🤔 Lựa Chọn Của Bạn 	: ");
+			luaChon1 = sc.nextLine();
+			
+			if(luaChon1.equals("0") ) {
+				System.out.println("GOODBYE FOR NOW ! BUT NOT FOREVER 🐶 ");
+				System.exit(0);
+			}
+			
 		do {
 			System.out.println("🎊-----------------------🎊");
 			System.out.println("🌟WELCOME TO MY OBJECT. WHAT WILL YOU DISCOVER TODAY?🌟");
@@ -20,9 +37,11 @@ public class Main {
 					+ "5.Làm Rỗng Danh Sách 🚫 \n"
 					+ "6.Kiểm Tra Số Lượng 💾 \n"
 					+ "0.Thoát ⚠ \n");
-			System.out.println("🤔 Lựa Chọn Của Bạn 	: ");
-			luaChon = sc.nextInt();
-			sc.nextLine();
+			try {
+				System.out.println("🤔 Lựa Chọn Của Bạn 	: ");
+				luaChon = sc.nextInt();
+				Input = true;
+				sc.nextLine();
 			switch (luaChon) {
 			case 1: {
 				HangDienMay hdm1 = new HangDienMay(null, null, null, luaChon, null, luaChon, luaChon);
@@ -65,12 +84,15 @@ public class Main {
 				break;
 			}
 			default:
-				System.out.println("GOODBYE FOR NOW ! BUT NOT FOREVER 🐶 ");
 				break;
 			}
+			}catch (Exception e) {
+				System.out.println("Nhập Dữ Liệu Không Đúng ⚠⚠⚠ ");
+				sc.next();
+			}
 		
-		}while(luaChon !=0);
-		
-		
+		}while(!Input || luaChon != 0 );
+		}while(!luaChon1.equals("0"));
 }
 }
+
