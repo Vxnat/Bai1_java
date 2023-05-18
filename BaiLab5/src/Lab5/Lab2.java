@@ -6,13 +6,15 @@ import java.util.Stack;
 public class Lab2 {
 	public static void main(String[] args) {
 		Stack<Integer> soNguyen = new Stack<Integer>();
-		int n[] = new int[5];
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Bạn Muốn Nhập Bao Nhiêu Số :");
+		 int n = sc.nextInt();
+		int a[] = new int[n];
 		
-			for (int i = 0; i < 5; i++) {
+			for (int i = 0; i < n; i++) {
 				System.out.println("Nhập số nguyên " +(i+1) + ":");
-				n[i] = sc.nextInt();
-				soNguyen.add(n[i]);
+				a[i] = sc.nextInt();
+				soNguyen.add(a[i]);
 			}
 		
 		System.out.println("Nhập Số Phần Tử Muốn Hiển Thị Ra Màn Hình : ");

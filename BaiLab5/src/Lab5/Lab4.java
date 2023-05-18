@@ -9,6 +9,7 @@ import java.util.Set;
 public class Lab4 {
 	public static void main(String[] args) {
 		Set<Float> f1 = new HashSet<Float>();
+		Set<Float> f2 = new HashSet<Float>();
 		Map<Integer,Float> m1 = new HashMap<>();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Set---------- ");
@@ -20,14 +21,15 @@ public class Lab4 {
 			n[i] = sc.nextInt();
 			if(f1.contains(n[i])== false) {
 				f1.add(n[i]);
+				f2.add(n[i]);
 			}
 			
 			else {
-				f1.remove(n[i]);
+				f2.remove(n[i]);
 			}
 		}
 		
-		for (float f : f1) {
+		for (float f : f2) {
 			System.out.print(f + " ");
 		}
 		System.out.println();
@@ -44,6 +46,7 @@ public class Lab4 {
         for (int dem : a) {
         	// Nếu Gặp Dem Xuất Hiện Trong Map Thì Trả Về Số Lần Xuất Hiện Dem
         	// Nếu Chưa Có Thì Trả Về 1
+        	// Đếm Số Lần Xuất Hiện Của Từng Giá Trị Trong Map 
         	m1.put(dem, m1.getOrDefault(dem, (float) 0) + 1);
         }
 

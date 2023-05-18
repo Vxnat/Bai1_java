@@ -13,6 +13,7 @@ public class Map_Main {
 		System.out.println("Số Học Sinh: ");
 		n = sc.nextInt();
 		sc.nextLine();
+		
  		for (int i = 0; i < n; i++) {
  			SinhVien sv = new SinhVien();
 			System.out.println("Học Sinh Thứ " +(i+1));
@@ -26,6 +27,7 @@ public class Map_Main {
 			System.out.println(sinhVien);
 			System.out.println();
 		}
+		
 		int i = 0;
 		System.out.println("Tìm Sinh Viên Dựa Theo Tên Lớp");
 		System.out.println("Nhập Tên Lớp: ");
@@ -35,7 +37,7 @@ public class Map_Main {
 		for (SinhVien sinhVien : map.values()) {
 			i++;
 			if(sinhVien.getLop().equals(lop)) {
-				System.out.println(sinhVien.toString());
+				System.out.println(sinhVien);
 				System.out.println();
 			}
 			else if(i>=n) {
@@ -43,6 +45,7 @@ public class Map_Main {
 			}
 		}
 		
+		System.out.println();
 		int a = 0;
 		System.out.println("Tìm Sinh Viên Dựa Theo MSV");
 		System.out.println("Nhập Mã Sinh Viên: ");
@@ -50,7 +53,7 @@ public class Map_Main {
 		System.out.println("Nhấn Enter Để Hiện Thị Kết Quả:");
  		sc.nextLine();
 		for (SinhVien sinhVien : map.values()) {
-			i++;
+			a++;
 			if(sinhVien.getMsv().equals(msv)) {
 				System.out.println(sinhVien);
 				System.out.println();
