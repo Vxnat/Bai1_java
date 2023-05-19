@@ -10,7 +10,7 @@ public class Lab4 {
 	public static void main(String[] args) {
 		Set<Float> f1 = new HashSet<Float>();
 		Set<Float> f2 = new HashSet<Float>();
-		Map<Integer,Float> m1 = new HashMap<>();
+		Map<Float,Float> m1 = new HashMap<>();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Set---------- ");
 		System.out.println("Nhập Số Phần Tử : ");
@@ -36,24 +36,24 @@ public class Lab4 {
 		System.out.println("Map-------------");
 		System.out.println("Nhập Số Phần Tử : ");
 		soPhanTu = sc.nextInt();
-		int[] a = new int[soPhanTu];
+		float[] a = new float[soPhanTu];
 		for (int i = 0; i < a.length; i++) {
 			System.out.println("Nhập Số: " + (i+1));
-			a[i] = sc.nextInt();
+			a[i] = sc.nextFloat();
 		}
 
         
-        for (int dem : a) {
-        	// Nếu Gặp Dem Xuất Hiện Trong Map Thì Trả Về Số Lần Xuất Hiện Dem
-        	// Nếu Chưa Có Thì Trả Về 1
-        	// Đếm Số Lần Xuất Hiện Của Từng Giá Trị Trong Map 
-        	m1.put(dem, m1.getOrDefault(dem, (float) 0) + 1);
-        }
+		  for (float dem : a) {
+	        	// Nếu Gặp Dem Xuất Hiện Trong Map Thì Trả Về Số Lần Xuất Hiện Dem
+	        	// Nếu Chưa Có Thì Trả Về 1
+	        	// Đếm Số Lần Xuất Hiện Của Từng Giá Trị Trong Map 
+	        	m1.put(dem, m1.getOrDefault(dem,  (float) 0) + 1);
+	        }
 
      
         System.out.println("Các số chỉ xuất hiện một lần trong mảng: ");
-        for (Map.Entry<Integer, Float> et : m1.entrySet()) {
-            if (et.getValue() < 2 ) {
+        for (Map.Entry<Float, Float> et : m1.entrySet()) {
+            if (et.getValue() == 1 ) {
                 System.out.println(et.getKey());
             }
         }
