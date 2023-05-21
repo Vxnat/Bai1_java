@@ -8,7 +8,7 @@ public class Lab1 {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		int n;
 		try (Scanner sc = new Scanner(System.in)) {
-			System.out.println("Nhập số nguyên: ");
+			System.out.println("Số Nguyên: ");
 			n = sc.nextInt();
 		}
 		list.add(n);
@@ -22,7 +22,7 @@ public class Lab1 {
 			}
 			
 		}
-		if(!kiemTra) System.out.println("Số Thuận Nghịch");
-		else System.out.println("Không Phải Số Thuận Nghịch");
+		if(!kiemTra) System.out.println(n + " Là Số Thuận Nghịch");
+		else System.out.println(n+ " Không Phải Số Thuận Nghịch");
 }
 }

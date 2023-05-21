@@ -17,36 +17,38 @@ public class Lab5 {
 	public static void main(String[] args) {
 		Set<Float> f1 = new HashSet<Float>();
 		Set<Float> f2 = new HashSet<Float>();
-		Set<Float> f3 = new HashSet<Float>();
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Bạn Muốn Nhập Bao Nhiêu Số : ");
+		System.out.println("Nhập Bao Nhiêu Số : ");
 		int count = sc.nextInt();
 		float n[] = new float[count];
 		for (int i = 0; i < count; i++) {
-			System.out.println("Nhập số nguyên " +(i+1) + ":");
+			System.out.println("Số Thứ " +(i+1) + ":");
 			n[i] = sc.nextInt();
 			f1.add(n[i]);
 		}
 		
-		System.out.println("Nhập 1 số : ");
+		System.out.println("Nhập 1 Số Để Kiểm Tra : ");
 		float a = sc.nextFloat();
 		for (Float kiemTra : f1) {
 			if(f1.contains(a)) {
-				System.out.println("Có Tồn Tại");
+				System.out.println("-> Có Tồn Tại Số " + a);
 				break;
 			}else {
-				System.out.println("Không");
+				System.out.println("-> Không Tồn Tại Số " + a);
 				break;
 			
 			}
 		}
 		
-		System.out.println("Bạn Muốn Nhập Bao Nhiêu Số : ");
+		System.out.println();
+		
+		Set<Float> f3 = new HashSet<Float>();
+		System.out.println("Nhập Bao Nhiêu Số : ");
 		count = sc.nextInt();
 		float b[] = new float [count];
 		for (int i = 0; i < count; i++) {
-			System.out.println("Nhập số nguyên " +(i+1) + ":");
+			System.out.println("Số Thứ " +(i+1) + ":");
 			b[i] = sc.nextInt();
 			if(f2.contains(b[i]) == false) {
 				f2.add(b[i]);
@@ -55,17 +57,11 @@ public class Lab5 {
 			else f3.remove(b[i]);
 		}
 		
-		System.out.println("Sắp Xếp Các Phần Tử Xuất Hiện 1 Lần : ");
-		// Sắp Xếp Ngược 
+		System.out.println("-> Sắp Xếp Nhỏ Dần Các Phần Tử Xuất Hiện 1 Lần : ");
+		// Sắp Xếp Nhỏ Dần
 		Set<Float> sapXep = new TreeSet(Comparator.reverseOrder());
 		sapXep.addAll(f3);
 		System.out.println(sapXep);
-		
-		
-		
-		
-		
-		
 		
 	}
 }
